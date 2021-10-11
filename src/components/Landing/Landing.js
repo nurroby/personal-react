@@ -40,6 +40,8 @@ function Landing() {
             [t.breakpoints.down('sm')]: {
                 width: '180px',
             },
+            boxShadow: `0 0 0 0em ${theme.primary30}`,
+            animation:`$pulse 2s infinite`,
         },
         contactBtn: {
             backgroundColor: theme.primary,
@@ -61,6 +63,16 @@ function Landing() {
             },
             [t.breakpoints.down('sm')]: {
                 display: 'none',
+            },
+        },
+        "@keyframes pulse": {
+            "0%": {
+            },
+            "70%": {
+                boxShadow: `0 0 0 0.5em ${theme.primary30}`,
+            },
+            "100%": {
+                boxShadow: `0 0 0 0 ${theme.primary30}`,
             },
         },
     }));
@@ -98,45 +110,6 @@ function Landing() {
                                     className='landing--social'
                                     style={{ color: theme.secondary }}
                                     aria-label='GitHub'
-                                />
-                            </a>
-                        )}
-                        {socialsData.twitter && (
-                            <a
-                                href={socialsData.twitter}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaTwitter
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Twitter'
-                                />
-                            </a>
-                        )}
-                        {socialsData.youtube && (
-                            <a
-                                href={socialsData.youtube}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaYoutube
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='YouTube'
-                                />
-                            </a>
-                        )}
-                        {socialsData.blogger && (
-                            <a
-                                href={socialsData.blogger}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                                <FaBlogger
-                                    className='landing--social'
-                                    style={{ color: theme.secondary }}
-                                    aria-label='Blogger'
                                 />
                             </a>
                         )}
